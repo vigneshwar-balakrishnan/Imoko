@@ -7,12 +7,15 @@ $(document).ready(function(){
     $('.close').click(function(){
         $(".modal").hide();//also can use hide 
     })
-    //window not working please check !!!
-    $(window).click(function(e){
-        if (e.target == $("modal")) {
-        $(".modal").css("display","none");
-        }
-    })
+    //window click close
+    $('.modal').click(function(){
+        $('.modal, .inner').hide(); 
+   });  
+   //to stop the modal content from disappering when clicked on it                                   
+   $('.modal-content').click(function(e){
+      e.stopPropagation();
+   }); 
+    
     
  })
  
