@@ -1,2 +1,2 @@
 # Imoko
-an image board
+A simple image board
