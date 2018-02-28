@@ -33,7 +33,7 @@
     }
 
     
-    .nav input[type="text"] 
+    .nav input[type="text"]
     {
         float:right; 
         background:rgb(170, 187, 243);; 
@@ -108,22 +108,71 @@ img{
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    font-family:"Roboto",Arial sans-serif;  
 }
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
+    color: #09184b;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 60%;
     height: 70%;
-    text-align: right;
+    text-align: center;
+    background: rgb(128, 145, 190);
+    font-size: 25px;
+  
     
 }
 .modal-content a{
-    color: #1b1919;
+    color: #1a1717;
     cursor:pointer; 
     
 }
+.close{
+   text-align: right;
+}
 /*---------------------------------------------------------------------------- */
+.filebtn{
+    display: none;
+}
+.picker img{
+    max-width: 50px;
+    max-height: 50px;
+    
+   
+}
+.picker{
+    
+    width: 50px;
+    margin-left: 45%;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    
+}
+.modal-content input{
+    margin-top: 20px;      
+    outline:none;
+    padding:8px; 
+    width: 300px;
+    text-align: center;
+}
+.extra{
+    
+    background-color: #191b22;
+    margin-top: 30px;
+    height: 17%;
+           
+}
+.extra a {
+    text-decoration:none; 
+    padding:8px 9px; 
+    
+    margin-left:50px;
+    display:inline-block;
+    cursor:pointer;
+    font-size: 22px;
+    color: #fefefe;
+    }

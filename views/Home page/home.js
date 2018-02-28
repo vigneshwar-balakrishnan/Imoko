@@ -9,7 +9,7 @@ $(document).ready(function(){
     })
     //window click close
     $('.modal').click(function(){
-        $('.modal, .inner').hide(); 
+        $('.modal, .inner').hide(); // .modal-content should work but not working
    });  
    //to stop the modal content from disappering when clicked on it                                   
    $('.modal-content').click(function(e){
