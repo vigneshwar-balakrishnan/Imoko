@@ -19,9 +19,13 @@
   "homepage": "https://github.com/vigneshwar-balakrishnan/imoko#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "cloudinary": "^1.10.0",
+    "connect-multiparty": "^2.1.0",
+    "dotenv": "^5.0.1",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "mongoose": "^5.0.7"
+    "mongoose": "^5.0.7",
+    "shortid": "^2.2.8"
   },
   "devDependencies": {
     "morgan": "^1.9.0"
