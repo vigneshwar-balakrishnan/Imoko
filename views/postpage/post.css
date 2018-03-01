@@ -1,0 +1,218 @@
+.nav {
+    width: 100%;   
+    display:inline-block;
+    margin-top:20px; 
+    text-align:center;
+    background:rgb(8, 19, 80)
+}
+.nav span{
+   
+    display:inline-block;
+    font-size: 40px;
+    
+}
+.nav li {
+    list-style:none; 
+    float:left;
+   
+       }
+       
+
+.nav li a {
+    text-decoration:none; 
+    padding:6px 9px; 
+    margin-top:7px; 
+    margin-left:7px;
+    display:inline-block;
+    cursor:pointer;
+    }
+
+.nav li a:hover {
+    background:rgba(230, 222, 222, 0.781);
+     transition:0.70s ease all;
+    }
+
+    
+    .nav input[type="text"]
+    {
+        float:right; 
+        background:rgb(170, 187, 243);; 
+        border:none;
+        outline:none;
+        text-align: center; 
+        padding:12px; 
+        color:rgb(87, 80, 80);
+        margin-top:10px; 
+        margin-right:20px; 
+        font-size: 20px;
+        font-family:"Roboto",Arial sans-serif; 
+        height:30px; 
+        width:30%; 
+        min-width:200px; 
+        max-width:500px;
+    }
+    .nav input[type="text"]:hover 
+    {
+        background:#dde8f3; 
+        transition:0.5s ease all;
+    }
+    .nav input[type="text"]:focus {
+        background:white;
+        color:rgb(57, 58, 61);
+        transition:0.5s ease all;
+    }
+    
+
+
+
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 17px;
+	font-family:'Dancing Script';
+    text-align: center;
+    color: rgb(253, 253, 253);
+    background-color: rgba(11, 56, 153, 0.863);
+}
+
+*{
+	box-sizing: border-box;
+}
+
+
+.wrap{
+/* display: grid;
+grid-template-columns: repeat(auto-fit,minmax(auto, 200px));
+grid-gap: 10px; */
+width: 50%;
+padding-left: 30px;
+padding-right: 30px;
+background: #142b79;
+
+}
+.dabba{
+    padding: 80px;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+/*--------------------------------- Modal Part------------------------------------ */
+/* Modal Content */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    font-family:"Roboto",Arial sans-serif;  
+}
+
+/* Modal Content */
+.modal-content {
+    color: #09184b;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    height: 70%;
+    text-align: center;
+    background: rgb(128, 145, 190);
+    font-size: 25px;
+  
+    
+}
+.modal-content a{
+    color: #1a1717;
+    cursor:pointer; 
+    
+}
+.close{
+   text-align: right;
+}
+/*---------------------------------------please REFACTOR lot of jugad------------------------------------- */
+.filebtn{
+    display: none;
+}
+.picker img{
+    max-width: 50px;
+    max-height: 50px;
+    
+   
+}
+.picker{
+    
+    width: 50px;
+    margin-left: 45%;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    
+}
+.modal-content input{
+    margin-top: 20px;      
+    outline:none;
+    padding:8px; 
+    width: 300px;
+    text-align: center;
+}
+.extra{
+    
+    background-color: #191b22;
+    margin-top: 30px;
+    height: 17%;
+           
+}
+.extra a {
+    text-decoration:none; 
+    padding:8px 9px; 
+    
+    margin-left:50px;
+    display:inline-block;
+    cursor:pointer;
+    font-size: 22px;
+    color: #fefefe;
+    }
+/*--------------------------------- image hover part------------------------------------ */
+.pic {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .box:hover .pic {
+    opacity: 0.3;
+  }
+  
+  .box:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: gold;
+    color: white;
+    font-size: 16px;
+    padding: 10px 10px;
+  }
+/*------------------------------------------------------------------------------- */
+
