@@ -3,7 +3,7 @@ var router = express.Router();
 const db = require("../models");
 
 router.get('/', function name(req, res) {
-    // nothing 
+    res.render('homepage/index');
 });
 
 router.get('/a/:postSlug', async function name(req, res) {

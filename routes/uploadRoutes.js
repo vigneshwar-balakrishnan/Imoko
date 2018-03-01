@@ -76,21 +76,14 @@ router.post('/upload', upload.single('image'), async function (req, res) {
     newPost.images.push(newImage);
     await newPost.save();
 
-    // await db.Post.findOneAndUpdate(
-    //     { slug: newPost.slug },
-    //     {
-    //         $push: { images: newImage._id },
-    //     }
-    // );
-
-
     console.log("newImage.slug: " + String(newImage.slug));
 
     cloudinary.v2.uploader.upload(req.file.path, { public_id: String(newImage.slug) }, function (error, result) {
         console.log(result);
-        // http://res.cloudinary.com/imoko/image/upload/SyGi2MVuM.png
-        // res.json(result);
-        res.redirect('/a/' + newPost.slug);
+        res.json({
+            postSlug: newPost.slug
+        });
+        // res.redirect('/a/' + newPost.slug);
         fs.unlink(req.file.path);
     });
 });
