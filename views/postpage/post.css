@@ -32,8 +32,8 @@
      transition:0.70s ease all;
     }
 
+    
     .nav input[type="text"]
-
     {
         float:right; 
         background:rgb(170, 187, 243);; 
@@ -81,11 +81,13 @@ body{
 
 
 .wrap{
-display: grid;
+/* display: grid;
 grid-template-columns: repeat(auto-fit,minmax(auto, 200px));
-grid-gap: 10px;
+grid-gap: 10px; */
+width: 50%;
 padding-left: 30px;
 padding-right: 30px;
+background: #142b79;
 
 }
 .dabba{
@@ -212,3 +214,5 @@ img{
     font-size: 16px;
     padding: 10px 10px;
   }
+/*------------------------------------------------------------------------------- */
+
