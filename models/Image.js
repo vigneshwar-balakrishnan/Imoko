@@ -6,16 +6,10 @@ var imageSchema = mongoose.Schema({
         required: [true, "can't be blank"],
         index: true
     },
-    title: {
-        type: String,
-    },
-    description: {
-        type: String,
-    },
+    title: { type: String },
+    description: { type: String },
     // comments: [{}],
-    views: {
-        type: Number
-    }
+    views: { type: Number }
 
 }, { timestamps: true });
 

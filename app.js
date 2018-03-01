@@ -22,6 +22,6 @@ const uploadRoutes = require('./routes/uploadRoutes');
 
 // Assign the above routes to route paths
 app.use('/', uploadRoutes);
-app.use('/gallery', postRoutes);
+app.use('/', postRoutes);
 
 app.listen(port);
