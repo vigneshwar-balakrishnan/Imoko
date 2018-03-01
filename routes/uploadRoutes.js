@@ -119,7 +119,7 @@ router.post('/a/:postSlug/addImageToPost', upload.single('image'), async functio
         // http://res.cloudinary.com/imoko/image/upload/SyGi2MVuM.png
         res.json({
             imgSlug: String(newImage.slug),
-            imgURL: "res.cloudinary.com/imoko/image/upload/" + String(newImage.slug),
+            imgURL: "//res.cloudinary.com/imoko/image/upload/" + String(newImage.slug),
             imgDesc: newImage.description
         });
         fs.unlink(req.file.path);
@@ -132,8 +132,12 @@ router.get('/test', function (req, res) {
 
 router.post('/test', upload.single('image'), function (req, res) {
     console.log(req.file);
-    res.json(req.file);
-    fs.unlink(req.file.path);
+    res.json({
+        imgSlug: "HJLjH04uM",
+        imgURL: "//res.cloudinary.com/imoko/image/upload/HJLjH04uM",
+        imgDesc: ""
+    });
+    // fs.unlink(req.file.path);
 })
 
 module.exports = router;

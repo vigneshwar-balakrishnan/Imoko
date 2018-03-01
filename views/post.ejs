@@ -12,17 +12,54 @@
     <p>
         Title: <%= post.title %>
     </p>
-    <% for(let i=0;i<post.images.length;i++) {%>
-        <div>Image: <%= i %></div>
-        <img src="//res.cloudinary.com/imoko/image/upload/<%= post.images[i].slug %>">
-        <div>Description: <%= post.images[i].description %></div>
-        <hr>
-    <% } %>
+    <div id="ImageList">
+        <% for(let i=0;i<post.images.length;i++) {%>
+            <!-- <div>Image: <%= i %></div> -->
+            <img src="//res.cloudinary.com/imoko/image/upload/<%= post.images[i].slug %>">
+            <div>Description: <%= post.images[i].description %></div>
+            <hr>
+        <% } %>
+    </div>
 
     <h5>Add an image:</h5>
-    <form action="/a/<%= post.slug %>/addImageToPost" method="post" enctype="multipart/form-data">
+    <!-- /a/<%= post.slug %>/addImageToPost -->
+    <form action="" method="post" enctype="multipart/form-data">
         <input type="file" name="image" id="image">
-        <button type="submit">upload</button>
+        <input type="hidden" id="postSlug" name="<%= post.slug %>" value="<%= post.slug %>">
+        <button type="submit" id="submit">upload</button>
     </form>
+    <script>
+        document.getElementById('submit').addEventListener('click', function (evt) {
+            evt.preventDefault();
+            evt.stopPropagation();
+            var data = new FormData();
+            var imageFile = document.getElementById('image');
+            data.append('image', imageFile.files[0]);
+            
+            var postSlug = document.getElementById('postSlug').value;
+            // '/a/' + postSlug + '/addImageToPost'
+            fetch('/a/' + postSlug + '/addImageToPost', {
+                method: 'POST',
+                body: data,
+                // headers: {
+                //     "Accept": "application/json"
+                // }
+            }).then(function (response) {
+                return response.json();
+            }).then((data) => {
+                console.log(data);
+                var img = document.createElement('img');
+                img.src = data.imgURL;
+                var div = document.createElement('div');
+                div.textContent = data.imgDesc;
+
+                var ImageList = document.getElementById('ImageList');
+                ImageList.appendChild(img);
+                ImageList.appendChild(div);
+                ImageList.appendChild(document.createElement('hr'));
+
+            })
+        }, false)    
+    </script>
 </body>
 </html>
