@@ -10,8 +10,9 @@ router.get('/a/:postSlug', async function name(req, res) {
     var post = await db.Post.findOne({ slug: req.params.postSlug })
         .populate('images')
         .exec();
-
-    res.json(post);
+    
+    res.render('post', {post});
+    // res.json(post);
 });
 
 
